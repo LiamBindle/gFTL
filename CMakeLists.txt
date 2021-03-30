@@ -22,8 +22,8 @@ endif()
 add_subdirectory (include)
 add_subdirectory (examples)
 
-find_package (PFUNIT 4.1 QUIET)
-if (PFUNIT_FOUND)
+if (BUILD_TESTING)
+  find_package(PFUNIT 4.1 REQUIRED)
   message("-- Detecting pFUnit: ${PFUNIT_DIR}")
   project (GFTL-TEST
     VERSION ${GFTL_VERSION}
